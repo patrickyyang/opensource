@@ -64,7 +64,13 @@ then
     export CFLAGS=" ${ARCH_FLAGS} -fpic -ffunction-sections -funwind-tables -fstack-protector -fno-strict-aliasing -finline-limit=64 "
     export LDFLAGS=" ${ARCH_LINK} "
 	  cd ${OPENSSL_TMP_FOLDER}
-    ./Configure android no-shared --openssldir=${OPENSSL_OUTPUT_PATH}
+    ./Configure android \
+    no-afalgeng no-async no-autoalginit no-autoerrinit no-bf no-blake2 no-camellia no-capieng no-cast no-chacha no-cmac no-cms no-comp no-crypto-mdebug no-crypto-mdebug-backtrace \
+    no-ct no-deprecated no-des no-dgram no-dh no-dsa no-dso no-dtls no-dynamic-engine no-ec no-ec2m no-ecdh no-ecdsa no-ec_nistp_64_gcc_128 no-egd no-engine no-err no-filenames \
+    no-gost no-heartbeats no-hw no-idea no-makedepend no-md2 no-md4 no-mdc2 no-multiblock no-nextprotoneg no-ocb no-ocsp no-pic no-poly1305 no-posix-io no-psk no-rc2 no-rc4 no-rc5 \
+    no-rdrand no-rfc3779 no-ripemd no-rmd160 no-scrypt no-sctp no-seed no-shared no-sock no-srp no-srtp no-sse2 no-ssl no-ssl-trace no-static-engine no-stdio no-threads no-tls no-ts \
+    no-ui no-unit-test no-whirlpool no-weak-ssl-ciphers no-zlib no-zlib-dynamic \
+    --openssldir=${OPENSSL_OUTPUT_PATH}
     build_library
 
 elif [ "$OPENSSL_TARGET_ABI" == "arm64-v8a" ]
@@ -90,7 +96,13 @@ then
     export CFLAGS=" ${ARCH_FLAGS} -fpic -ffunction-sections -funwind-tables -fstack-protector -fno-strict-aliasing -finline-limit=64 "
     export LDFLAGS=" ${ARCH_LINK} "
     cd ${OPENSSL_TMP_FOLDER}
-    ./Configure android --openssldir=${OPENSSL_OUTPUT_PATH}
+    ./Configure android \
+    no-afalgeng no-async no-autoalginit no-autoerrinit no-bf no-blake2 no-camellia no-capieng no-cast no-chacha no-cmac no-cms no-comp no-crypto-mdebug no-crypto-mdebug-backtrace \
+    no-ct no-deprecated no-des no-dgram no-dh no-dsa no-dso no-dtls no-dynamic-engine no-ec no-ec2m no-ecdh no-ecdsa no-ec_nistp_64_gcc_128 no-egd no-engine no-err no-filenames \
+    no-gost no-heartbeats no-hw no-idea no-makedepend no-md2 no-md4 no-mdc2 no-multiblock no-nextprotoneg no-ocb no-ocsp no-pic no-poly1305 no-posix-io no-psk no-rc2 no-rc4 no-rc5 \
+    no-rdrand no-rfc3779 no-ripemd no-rmd160 no-scrypt no-sctp no-seed no-shared no-sock no-srp no-srtp no-sse2 no-ssl no-ssl-trace no-static-engine no-stdio no-threads no-tls no-ts \
+    no-ui no-unit-test no-whirlpool no-weak-ssl-ciphers no-zlib no-zlib-dynamic \
+    --openssldir=${OPENSSL_OUTPUT_PATH}
     build_library
 
 elif [ "$OPENSSL_TARGET_ABI" == "armeabi" ]
@@ -116,7 +128,13 @@ then
     export CFLAGS=" ${ARCH_FLAGS} -fpic -ffunction-sections -funwind-tables -fstack-protector -fno-strict-aliasing -finline-limit=64 "
     export LDFLAGS=" ${ARCH_LINK} "
     cd ${OPENSSL_TMP_FOLDER}
-    ./Configure android --openssldir=${OPENSSL_OUTPUT_PATH}
+    ./Configure android \
+    no-afalgeng no-async no-autoalginit no-autoerrinit no-bf no-blake2 no-camellia no-capieng no-cast no-chacha no-cmac no-cms no-comp no-crypto-mdebug no-crypto-mdebug-backtrace \
+    no-ct no-deprecated no-des no-dgram no-dh no-dsa no-dso no-dtls no-dynamic-engine no-ec no-ec2m no-ecdh no-ecdsa no-ec_nistp_64_gcc_128 no-egd no-engine no-err no-filenames \
+    no-gost no-heartbeats no-hw no-idea no-makedepend no-md2 no-md4 no-mdc2 no-multiblock no-nextprotoneg no-ocb no-ocsp no-pic no-poly1305 no-posix-io no-psk no-rc2 no-rc4 no-rc5 \
+    no-rdrand no-rfc3779 no-ripemd no-rmd160 no-scrypt no-sctp no-seed no-shared no-sock no-srp no-srtp no-sse2 no-ssl no-ssl-trace no-static-engine no-stdio no-threads no-tls no-ts \
+    no-ui no-unit-test no-whirlpool no-weak-ssl-ciphers no-zlib no-zlib-dynamic \
+    --openssldir=${OPENSSL_OUTPUT_PATH}
     build_library
 
 elif [ "$OPENSSL_TARGET_ABI" == "x86" ]
@@ -142,7 +160,13 @@ then
     export CFLAGS=" ${ARCH_FLAGS} -fpic -ffunction-sections -funwind-tables -fstack-protector -fno-strict-aliasing -finline-limit=64 "
     export LDFLAGS=" ${ARCH_LINK} "
     cd ${OPENSSL_TMP_FOLDER}
-    ./Configure android --openssldir=${OPENSSL_OUTPUT_PATH}
+    ./Configure android \
+    no-afalgeng no-async no-autoalginit no-autoerrinit no-bf no-blake2 no-camellia no-capieng no-cast no-chacha no-cmac no-cms no-comp no-crypto-mdebug no-crypto-mdebug-backtrace \
+    no-ct no-deprecated no-des no-dgram no-dh no-dsa no-dso no-dtls no-dynamic-engine no-ec no-ec2m no-ecdh no-ecdsa no-ec_nistp_64_gcc_128 no-egd no-engine no-err no-filenames \
+    no-gost no-heartbeats no-hw no-idea no-makedepend no-md2 no-md4 no-mdc2 no-multiblock no-nextprotoneg no-ocb no-ocsp no-pic no-poly1305 no-posix-io no-psk no-rc2 no-rc4 no-rc5 \
+    no-rdrand no-rfc3779 no-ripemd no-rmd160 no-scrypt no-sctp no-seed no-shared no-sock no-srp no-srtp no-sse2 no-ssl no-ssl-trace no-static-engine no-stdio no-threads no-tls no-ts \
+    no-ui no-unit-test no-whirlpool no-weak-ssl-ciphers no-zlib no-zlib-dynamic \
+    --openssldir=${OPENSSL_OUTPUT_PATH}
     build_library
 
 elif [ "$OPENSSL_TARGET_ABI" == "x86_64" ]
@@ -166,7 +190,13 @@ then
     export CFLAGS=" ${ARCH_FLAGS} -fpic -ffunction-sections -funwind-tables -fstack-protector -fno-strict-aliasing -finline-limit=64 "
     export LDFLAGS=" ${ARCH_LINK} "
     cd ${OPENSSL_TMP_FOLDER}
-    ./Configure android --openssldir=${OPENSSL_OUTPUT_PATH}
+    ./Configure android \
+    no-afalgeng no-async no-autoalginit no-autoerrinit no-bf no-blake2 no-camellia no-capieng no-cast no-chacha no-cmac no-cms no-comp no-crypto-mdebug no-crypto-mdebug-backtrace \
+    no-ct no-deprecated no-des no-dgram no-dh no-dsa no-dso no-dtls no-dynamic-engine no-ec no-ec2m no-ecdh no-ecdsa no-ec_nistp_64_gcc_128 no-egd no-engine no-err no-filenames \
+    no-gost no-heartbeats no-hw no-idea no-makedepend no-md2 no-md4 no-mdc2 no-multiblock no-nextprotoneg no-ocb no-ocsp no-pic no-poly1305 no-posix-io no-psk no-rc2 no-rc4 no-rc5 \
+    no-rdrand no-rfc3779 no-ripemd no-rmd160 no-scrypt no-sctp no-seed no-shared no-sock no-srp no-srtp no-sse2 no-ssl no-ssl-trace no-static-engine no-stdio no-threads no-tls no-ts \
+    no-ui no-unit-test no-whirlpool no-weak-ssl-ciphers no-zlib no-zlib-dynamic \
+    --openssldir=${OPENSSL_OUTPUT_PATH}
     build_library
 elif [ "$OPENSSL_TARGET_ABI" == "mips" ]
 then
@@ -192,7 +222,13 @@ then
     export CFLAGS=" ${ARCH_FLAGS} -fpic -ffunction-sections -funwind-tables -fstack-protector -fno-strict-aliasing -finline-limit=64 "
     export LDFLAGS=" ${ARCH_LINK} "
     cd ${OPENSSL_TMP_FOLDER}
-    ./Configure android --openssldir=${OPENSSL_OUTPUT_PATH}
+    ./Configure android \
+    no-afalgeng no-async no-autoalginit no-autoerrinit no-bf no-blake2 no-camellia no-capieng no-cast no-chacha no-cmac no-cms no-comp no-crypto-mdebug no-crypto-mdebug-backtrace \
+    no-ct no-deprecated no-des no-dgram no-dh no-dsa no-dso no-dtls no-dynamic-engine no-ec no-ec2m no-ecdh no-ecdsa no-ec_nistp_64_gcc_128 no-egd no-engine no-err no-filenames \
+    no-gost no-heartbeats no-hw no-idea no-makedepend no-md2 no-md4 no-mdc2 no-multiblock no-nextprotoneg no-ocb no-ocsp no-pic no-poly1305 no-posix-io no-psk no-rc2 no-rc4 no-rc5 \
+    no-rdrand no-rfc3779 no-ripemd no-rmd160 no-scrypt no-sctp no-seed no-shared no-sock no-srp no-srtp no-sse2 no-ssl no-ssl-trace no-static-engine no-stdio no-threads no-tls no-ts \
+    no-ui no-unit-test no-whirlpool no-weak-ssl-ciphers no-zlib no-zlib-dynamic \
+    --openssldir=${OPENSSL_OUTPUT_PATH}
     build_library
 
 elif [ "$OPENSSL_TARGET_ABI" == "mips64" ]
@@ -219,7 +255,13 @@ then
     export CFLAGS=" ${ARCH_FLAGS} -fpic -ffunction-sections -funwind-tables -fstack-protector -fno-strict-aliasing -finline-limit=64 "
     export LDFLAGS=" ${ARCH_LINK} "
     cd ${OPENSSL_TMP_FOLDER}
-    ./Configure android --openssldir=${OPENSSL_OUTPUT_PATH}
+    ./Configure android \
+    no-afalgeng no-async no-autoalginit no-autoerrinit no-bf no-blake2 no-camellia no-capieng no-cast no-chacha no-cmac no-cms no-comp no-crypto-mdebug no-crypto-mdebug-backtrace \
+    no-ct no-deprecated no-des no-dgram no-dh no-dsa no-dso no-dtls no-dynamic-engine no-ec no-ec2m no-ecdh no-ecdsa no-ec_nistp_64_gcc_128 no-egd no-engine no-err no-filenames \
+    no-gost no-heartbeats no-hw no-idea no-makedepend no-md2 no-md4 no-mdc2 no-multiblock no-nextprotoneg no-ocb no-ocsp no-pic no-poly1305 no-posix-io no-psk no-rc2 no-rc4 no-rc5 \
+    no-rdrand no-rfc3779 no-ripemd no-rmd160 no-scrypt no-sctp no-seed no-shared no-sock no-srp no-srtp no-sse2 no-ssl no-ssl-trace no-static-engine no-stdio no-threads no-tls no-ts \
+    no-ui no-unit-test no-whirlpool no-weak-ssl-ciphers no-zlib no-zlib-dynamic \
+    --openssldir=${OPENSSL_OUTPUT_PATH}
     build_library
 
 else
